@@ -1,8 +1,11 @@
 
 similar = ['a', '4', '@'], ['e', '3', '&'], ['i', '1', '!'], ['o', '0'] # Caracteres similares
 inadequado = ['4', '@', '3', '&', '1', '!', '0'] # Caracteres inadequados
+indesejadas = ['abelha'] # palavras indesejadas
 
-txt = '@bbe3&&lllhhaaa@4@4a'.lower()
+txt = 'Eeee333uuu ggoostt00oo dde @bbe3&&lllhhasssss'.lower().strip()
+
+print(txt)
 
 lista_caracters = []
 
@@ -25,21 +28,21 @@ txt_temp, dell = txt, ''
 for c in range(len(txt)):
 
     if c+1 < len(txt):
-
         if txt[c] == txt[c+1]:
-            
             dell += txt[c]
 
         elif txt[c] != txt[c+1] and len(dell) != 0:
-
             txt_temp= txt_temp.replace(dell+dell[0], dell[0], 1) # Repetidos = Principal | Ex: 'eeeeee' = 'e'
             dell = ''
 
 # Susbstitui os ultimos caracteres se necessario
 
-if txt_temp[0] == txt_temp[-1] and len(dell) != 0:
+if len(dell) > 0 and dell[0] == dell[-1]:
     txt_temp = txt_temp.replace(dell, '', 1) # Repetidos = Principal | Ex: 'eeeeee' = 'e'
 
 txt = txt_temp
 
 print(txt)
+
+#if txt in indesejadas:
+#    print(f'{txt[0:2]}{(len(txt)-2)*"*"}')
