@@ -1,9 +1,9 @@
 
 similar = ['a', '4', '@'], ['e', '3', '&'], ['i', '1', '!'], ['o', '0'], [' ', '-', '_', '/', '|'] # Caracteres similares
 inadequado = ['4', '@', '3', '&', '1', '!', '0'] # Caracteres inadequados
-indesejadas = ['abelhas', 'gosto'] # palavras indesejadas
+indesejadas = ['abelhas', 'gosto'] # Palavras indesejadas
 
-txt = '----Eeee333uuu-ggoostt00oo___dde| @bbe3&&lllhhasssss///'.lower().strip()
+txt = '----Eeee333uuu-ggoostt00oo___dde| @bbe3&&lllhhasssss///'.lower()
 
 print(txt)
 
@@ -15,6 +15,7 @@ for c in txt:
     lista_caracters.append(c)
 
 for c in range(len(similar)): 
+    
     for c1 in range(len(lista_caracters)): 
         if lista_caracters[c1] in similar[c]:
             lista_caracters[c1] = similar[c][0] # Similar = Original | Ex: @ = a
@@ -28,6 +29,7 @@ txt_temp, dell = txt, ''
 for c in range(len(txt)):
 
     if c+1 < len(txt):
+        
         if txt[c] == txt[c+1]:
             dell += txt[c]
 
@@ -50,17 +52,19 @@ for c in txt:
 
     if c not in ' ':
         palavra.append(c)
+        
     else:
         lista_palavras.append(''.join(palavra[:]))
         palavra = []
 
 lista_palavras.append(''.join(palavra[:]))
 
-# Modificando a palavra se ele for indesejada
+# Modificando a palavra se ela for indesejada
 
 print(txt)
 
 for c in range(len(lista_palavras)):
+    
     if lista_palavras[c] in indesejadas:
         lista_palavras[c] = f'{lista_palavras[c][0]}{(len(lista_palavras[c])-1)*"*"}'
 
