@@ -1,9 +1,10 @@
 
-similar = ['a', '4', '@'], ['e', '3', '&'], ['i', '1', '!'], ['o', '0'], [' ', '-', '_', '/', '|'] # Caracteres similares
-inadequado = ['4', '@', '3', '&', '1', '!', '0'] # Caracteres inadequados
-indesejadas = ['abelhas', 'gosto'] # Palavras indesejadas
+similar = ['a', '4', '@'], ['e', '3', '&'], ['i', '1', '!'], ['o', '0'], [' ', '-', '_', '/', '|'], ['s', '$'] # Caracteres similares
+indesejadas = ['abelhas', 'gosto', 'karalho'] # Palavras indesejadas
 
 txt = '----Eeee333uuu-ggoostt00oo___dde| @bbe3&&lllhhasssss///'.lower()
+
+txt = input().lower()
 
 print(txt)
 
