@@ -1,6 +1,6 @@
 
 similar = ['a', '4', '@'], ['e', '3', '&'], ['i', '1', '!'], ['o', '0'], [' ', '-', '_', '/', '|'], ['s', '$'] # Caracteres similares
-indesejadas = ['abelhas', 'gosto', 'karalho'] # Palavras indesejadas
+indesejadas = ['abelhas', 'gosto', 'karalho', 'krl'] # Palavras indesejadas
 
 txt = '----Eeee333uuu-ggoostt00oo___dde| @bbe3&&lllhhasssss///'.lower()
 
